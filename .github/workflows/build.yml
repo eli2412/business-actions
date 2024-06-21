@@ -3,13 +3,13 @@ on :
 push:
   branches: [ main ]
 jobs:
-test:
-  name: Test
-  runs-on: ubuntu-lastest
-  steps:
-  - uses: actions/checkout@v3
-  - uses: actions/setup-node@v3
-  with:
+  test:
+    name: Test
+    runs-on: ubuntu-lastest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+    with:
     node-version: 16.x
-  - run: npm ci
-  - run: npm test
+    - run: npm ci
+    - run: npm test
